@@ -11,7 +11,7 @@ public class Obstacle : MonoBehaviour
 
 	private void Start()
 	{
-		velocity = velocity + Time.timeSinceLevelLoad / 10;
+		velocity = velocity + Time.timeSinceLevelLoad / 5;
 	}
 	private void FixedUpdate()
 	{

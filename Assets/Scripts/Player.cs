@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	public Rigidbody2D rigidBodyPlayer;
+	public GameManager gameManager;
 	private bool shouldChangeGravity = false;
 
 	private void Update()
@@ -22,6 +23,12 @@ public class Player : MonoBehaviour
 			changeGravity();
 		}
 		updateGravityScale();
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		Debug.Log("Colide");
+		gameManager.gameOver();
 	}
 
 	void changeGravity()
