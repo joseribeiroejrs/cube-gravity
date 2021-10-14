@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Canvas gameOverCanvas;
+	public Canvas gameOverCanvas;
 	public float slowness = 10f;
-
 	private float originalFixedDeltaTime;
-
 
 	private void Start()
 	{
@@ -30,6 +28,7 @@ public class GameManager : MonoBehaviour
 		showMatrixCamera();
 		yield return new WaitForSeconds(1.5f / slowness);
 		showGameOverCanvas();
+		CanvasController.Instance.setGameOver();
 	}
 
 	public void showMatrixCamera()
