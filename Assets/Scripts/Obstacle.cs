@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    public float velocity = 2f;
+    public float velocity = 8f;
     public Rigidbody2D rigidyBodyObstacle;
 
 	private bool passedOn = false;
 
+	private void Start()
+	{
+		velocity = velocity + Time.timeSinceLevelLoad / 10;
+	}
 	private void FixedUpdate()
 	{
         rigidyBodyObstacle.position += Vector2.left * velocity * Time.fixedDeltaTime;

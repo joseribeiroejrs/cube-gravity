@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 		{
 			changeGravity();
 		}
+		updateGravityScale();
 	}
 
 	void changeGravity()
@@ -28,6 +29,18 @@ public class Player : MonoBehaviour
 		resetVelocity();
 		invertGravity();
 		shouldChangeGravity = false;
+	}
+
+	void updateGravityScale()
+	{
+		float incrementGravityScale = Time.timeSinceLevelLoad / 100000;
+		if (rigidBodyPlayer.gravityScale > 0)
+		{
+			rigidBodyPlayer.gravityScale += incrementGravityScale;
+		} else
+		{
+			rigidBodyPlayer.gravityScale -= incrementGravityScale;
+		}
 	}
 
 	void invertGravity()

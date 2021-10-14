@@ -146,7 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 2
   rigidyBodyObstacle: {fileID: 5361055113228826610}
-  parentObstacle: {fileID: 5361055114039492988}
 --- !u!1 &5361055114039492988
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c889df353edffe4c80da3072b1a6f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangePositionY: 4
+  rangePositionY: 3.5
 --- !u!114 &5979299694588443308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,9 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10c9a54761e0b514e8a3ab10ad3bd3f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 2
+  velocity: 10
   rigidyBodyObstacle: {fileID: 5361055114039492986}
-  parentObstacle: {fileID: 5361055114039492988}
 --- !u!1 &5361055114597057985
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,4 +375,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 2
   rigidyBodyObstacle: {fileID: 5361055114597058015}
-  parentObstacle: {fileID: 5361055114039492988}

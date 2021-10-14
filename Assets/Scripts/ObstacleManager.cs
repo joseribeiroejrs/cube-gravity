@@ -14,6 +14,10 @@ public class ObstacleManager : MonoBehaviour
 	}
 	private void FixedUpdate()
 	{
+		if (intervalToCreateObstacle > 1)
+		{
+			intervalToCreateObstacle -= Time.timeSinceLevelLoad / 100000;
+		}
 		respawnObstacle();
 	}
 
