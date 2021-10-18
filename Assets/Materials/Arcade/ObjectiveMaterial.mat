@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ObstacleMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 6e5676c8cdee9b84c9f361d08a517c14, type: 3}
+  m_Name: ObjectiveMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: ea6922fce19c55c40846d0634193694d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -33,5 +33,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_92bd7813949b4277a7b54d7d1d4cd75a: {r: 0.764151, g: 0.046858337, b: 0.046858337, a: 0}
+    - ColorObjective: {r: 119.54108, g: 116.410095, b: 0.5638743, a: 0}
   m_BuildTextureStacks: []

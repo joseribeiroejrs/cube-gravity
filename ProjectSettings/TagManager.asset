@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Player
   - Obstacles
-  - SmallObstacles
-  - 
-  - 
+  - Objective
+  - Wall
+  - Background
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2947832803
+    locked: 0
+  - name: Objective
+    uniqueID: 3345029861
+    locked: 0
+  - name: Wall
+    uniqueID: 2437923785
+    locked: 0
+  - name: Background
+    uniqueID: 1596860405
     locked: 0

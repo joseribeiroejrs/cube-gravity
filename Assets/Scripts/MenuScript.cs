@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-	private int INFINITY_MODE_INDEX = 1;
-    public void PlayEvent()
+	private int ARCADE_MODE_LEVEL_001 = 2;
+	public void PlayEvent()
 	{
-		SceneManager.LoadScene(INFINITY_MODE_INDEX);
+		SceneManager.LoadScene(ARCADE_MODE_LEVEL_001);
 	}
 
-	public void QuitEvent()
+	public void QuitEvent() 
 	{
 		Application.Quit();
 	}

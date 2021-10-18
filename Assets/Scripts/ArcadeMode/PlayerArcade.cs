@@ -6,7 +6,7 @@ public class PlayerArcade : MonoBehaviour
 {
 	public Rigidbody2D rigidBodyPlayer;
 	public GameManagerArcade gameManagerArcade;
-	public float movementSpeed = 2f;
+	public float movementSpeed = 500f;
 	private bool shouldChangeGravity = false;
 
 	private void Update()
@@ -28,7 +28,7 @@ public class PlayerArcade : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		gameManagerArcade.gameOver();
+		// gameManagerArcade.gameOver();
 	}
 
 	void changeGravity()
