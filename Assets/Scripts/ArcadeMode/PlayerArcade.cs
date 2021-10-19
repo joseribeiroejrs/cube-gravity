@@ -26,11 +26,6 @@ public class PlayerArcade : MonoBehaviour
 		movementHorizontal();
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		// gameManagerArcade.gameOver();
-	}
-
 	void changeGravity()
 	{
 		resetVelocity();

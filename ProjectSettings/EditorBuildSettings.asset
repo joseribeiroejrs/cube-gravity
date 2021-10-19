@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArcadeMode/ArcadeLevel002.unity
     guid: 3ee58bb2cce15a14194a1665f4d6b91a
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode/ArcadeLevel003.unity
+    guid: 4b298c086d5cdbd489a8fe170ed0a200
   - enabled: 0
     path: Assets/Scenes/ArcadeMode/ArcadeTemplate.unity
     guid: 5a7dd23f20d3fae45bfdd26ec71af1e7

@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
-public class Objective : MonoBehaviour
+public class ObstacleArcade : MonoBehaviour
 {
 	private FeedbackManager feedbackManager;
 
@@ -18,7 +16,7 @@ public class Objective : MonoBehaviour
 		bool isCollisionWithPlayer = collision.CompareTag("Player");
 		if (isCollisionWithPlayer)
 		{
-			feedbackManager.showLevelCompletePainel();
+			feedbackManager.showLevelFailedPainel();
 		}
 	}
 }
