@@ -16,7 +16,6 @@ public class FeedbackManager : MonoBehaviour
 
     public void showLevelFailedPainel()
     {
-        LevelFailedPainel.SetActive(true);
         StartCoroutine("LoadActiveLevel");
     }
 
@@ -28,6 +27,8 @@ public class FeedbackManager : MonoBehaviour
 
     IEnumerator LoadActiveLevel()
     {
+        yield return new WaitForSeconds(1f);
+        LevelFailedPainel.SetActive(true);
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
