@@ -10,6 +10,8 @@ public class PlayerArcade : MonoBehaviour
 	public GameObject explosionPlayer;
 	public SpriteRenderer splashImage;
 	public float movementSpeed = 500f;
+
+	public Joystick joystick;
 	private bool shouldChangeGravity = false;
 	private bool isDead = false;
 
@@ -17,7 +19,7 @@ public class PlayerArcade : MonoBehaviour
 	{
 		if (getJumpMovement() && !shouldChangeGravity)
 		{
-			shouldChangeGravity = true;
+			setShouldChangeGravity();
 		}
 	}
 
@@ -38,6 +40,12 @@ public class PlayerArcade : MonoBehaviour
 			showExplosionPlayer();
 		}
 	}
+
+	public void setShouldChangeGravity()
+	{
+		shouldChangeGravity = true;
+	}
+
 
 	void changeGravity()
 	{
@@ -81,7 +89,12 @@ public class PlayerArcade : MonoBehaviour
 
 	float getHorizontalMovement()
 	{
-		return Input.GetAxis("Horizontal");
+		float inputHorizontal = Input.GetAxis("Horizontal");
+		if (inputHorizontal != 0)
+		{
+			return inputHorizontal;
+		}
+		return joystick.Horizontal;
 	}
 
 	void showExplosionPlayer()
