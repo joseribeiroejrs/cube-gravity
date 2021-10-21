@@ -2,11 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FeedbackManager : MonoBehaviour
 {
+    public GameObject CurrentLevelPainel;
     public GameObject LevelCompletePainel;
     public GameObject LevelFailedPainel;
+    public Text currentLevelText;
+
+	private void Start()
+	{
+        changeCurrentLevelText();
+        StartCoroutine("hideCurrentLevelPainel");
+	}
+
+    public void changeCurrentLevelText()
+	{
+        currentLevelText.text = SceneManager.GetActiveScene().buildIndex.ToString();
+    }
 
     public void showLevelCompletePainel()
 	{
@@ -17,6 +31,12 @@ public class FeedbackManager : MonoBehaviour
     public void showLevelFailedPainel()
     {
         StartCoroutine("LoadActiveLevel");
+    }
+
+    IEnumerator hideCurrentLevelPainel()
+	{
+        yield return new WaitForSeconds(3f);
+        CurrentLevelPainel.SetActive(false);
     }
 
     IEnumerator LoadNextLevel()
