@@ -2422,6 +2422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6944029699165209502, guid: 6faee8b2e65ffd940b86f99851d328e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6faee8b2e65ffd940b86f99851d328e9, type: 3}
 --- !u!4 &1924287597 stripped
