@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   explosionPlayer: {fileID: 2226603927584717871, guid: be9a01ce021898a43bcbb00092aece15, type: 3}
   splashImage: {fileID: 6438364963391688163}
   movementSpeed: 500
+  durationCurrentLevelPainel: 0.22
   joystick: {fileID: 6147903950023008452}
 --- !u!61 &1012128294479031135
 BoxCollider2D:
