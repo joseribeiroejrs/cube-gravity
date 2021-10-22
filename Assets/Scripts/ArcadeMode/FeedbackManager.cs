@@ -10,8 +10,9 @@ public class FeedbackManager : MonoBehaviour
     public GameObject LevelCompletePainel;
     public GameObject LevelFailedPainel;
     public Text currentLevelText;
+    public Text completedLevelText;
 
-	private void Start()
+    private void Start()
 	{
         changeCurrentLevelText();
         StartCoroutine("hideCurrentLevelPainel");
@@ -19,7 +20,9 @@ public class FeedbackManager : MonoBehaviour
 
     public void changeCurrentLevelText()
 	{
-        currentLevelText.text = SceneManager.GetActiveScene().buildIndex.ToString();
+        string currentLevel = SceneManager.GetActiveScene().buildIndex.ToString();
+        currentLevelText.text = currentLevel;
+        completedLevelText.text = currentLevel;
     }
 
     public void showLevelCompletePainel()

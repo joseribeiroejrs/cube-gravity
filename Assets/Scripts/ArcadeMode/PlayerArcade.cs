@@ -10,8 +10,9 @@ public class PlayerArcade : MonoBehaviour
 	public GameObject explosionPlayer;
 	public SpriteRenderer splashImage;
 	public float movementSpeed = 500f;
-
+	public float durationCurrentLevelPainel = 2.2f;
 	public Joystick joystick;
+
 	private bool shouldChangeGravity = false;
 	private bool isDead = false;
 	private Color playerColor;
@@ -26,12 +27,10 @@ public class PlayerArcade : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (shouldChangeGravity && !isDead)
+		if (currentLevelPainelIsHide())
 		{
-			changeGravity();
+			interactionPlayer();
 		}
-		movementHorizontal();
-		changeSpriteColor();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +40,21 @@ public class PlayerArcade : MonoBehaviour
 			isDead = true;
 			showExplosionPlayer();
 		}
+	}
+
+	public void interactionPlayer()
+	{
+		if (shouldChangeGravity && !isDead)
+		{
+			changeGravity();
+		}
+		movementHorizontal();
+		changeSpriteColor();
+	}
+
+	public bool currentLevelPainelIsHide()
+	{
+		return durationCurrentLevelPainel < Time.timeSinceLevelLoad;
 	}
 
 	public void setShouldChangeGravity()
