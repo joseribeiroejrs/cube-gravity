@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd2274b5905b3f44b248b5c6aa1dc94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelCompletePainel: {fileID: 0}
+  slowness: 1.5

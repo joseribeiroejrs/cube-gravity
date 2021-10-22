@@ -14,6 +14,7 @@ public class PlayerArcade : MonoBehaviour
 	public Joystick joystick;
 	private bool shouldChangeGravity = false;
 	private bool isDead = false;
+	private Color playerColor;
 
 	private void Update()
 	{
@@ -30,6 +31,7 @@ public class PlayerArcade : MonoBehaviour
 			changeGravity();
 		}
 		movementHorizontal();
+		changeSpriteColor();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -102,6 +104,16 @@ public class PlayerArcade : MonoBehaviour
 		resetVelocity();
 		zeroGravity();
 		splashImage.enabled = false;
-		Instantiate(explosionPlayer, transform);
+		GameObject objectInstatiated = Instantiate(explosionPlayer, transform);
+		objectInstatiated.GetComponent<Renderer>().material.color = playerColor;
+	}
+
+	void changeSpriteColor()
+	{
+		Color DEFAULT_BLUE = new Color(0, 9, 191);
+		Color DEFAULT_ORANGE = new Color(191, 9, 0);
+		playerColor = rigidBodyPlayer.gravityScale > 0 ? DEFAULT_ORANGE : DEFAULT_BLUE;
+
+		gameObject.GetComponent<Renderer>().material.color = playerColor;
 	}
 }

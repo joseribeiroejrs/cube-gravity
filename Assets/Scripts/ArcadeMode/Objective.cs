@@ -18,7 +18,12 @@ public class Objective : MonoBehaviour
 		bool isCollisionWithPlayer = collision.CompareTag("Player");
 		if (isCollisionWithPlayer)
 		{
-			feedbackManager.showLevelCompletePainel();
+			showLevelCompletePainel();
 		}
+	}
+
+	public void showLevelCompletePainel()
+	{
+		feedbackManager.showLevelCompletePainel();
 	}
 }

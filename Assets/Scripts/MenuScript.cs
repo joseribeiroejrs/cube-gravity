@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-	private int ARCADE_MODE_LEVEL_001 = 1;
+	private string ARCADE_MODE_LEVEL_001 = "ArcadeLevel001";
 	public void PlayEvent()
 	{
 		SceneManager.LoadScene(ARCADE_MODE_LEVEL_001);
