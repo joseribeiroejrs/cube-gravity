@@ -723,6 +723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FeedbackUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3223722407746582073, guid: 38517d74496e9cb46a3f5201d65bdff3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38517d74496e9cb46a3f5201d65bdff3, type: 3}
 --- !u!1001 &1152379456
