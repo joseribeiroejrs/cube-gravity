@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class Objective : MonoBehaviour
 {
 	private FeedbackManager feedbackManager;
+	public AudioSource SuccessLevelAudio;
 
 	private void Start()
 	{
@@ -19,6 +20,7 @@ public class Objective : MonoBehaviour
 		if (isCollisionWithPlayer)
 		{
 			showLevelCompletePainel();
+			SuccessLevelAudio.gameObject.SetActive(true);
 		}
 	}
 

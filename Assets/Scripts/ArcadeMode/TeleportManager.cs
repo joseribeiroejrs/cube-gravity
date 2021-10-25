@@ -7,6 +7,7 @@ public class TeleportManager : MonoBehaviour
     public float lastTeleport;
 	public float minimumTimeToTeleport = .1f;
 	public Canvas TransitionCanvas;
+	public AudioSource TeleportSound;
 	private bool showTransition = false;
 
 	public bool canTeleport ()
@@ -27,8 +28,10 @@ public class TeleportManager : MonoBehaviour
 	{
 		showTransition = true;
 		TransitionCanvas.gameObject.SetActive(true);
+		TeleportSound.gameObject.SetActive(true);
 		yield return new WaitForSeconds(.4f);
 		TransitionCanvas.gameObject.SetActive(false);
 		showTransition = false;
+		TeleportSound.gameObject.SetActive(false);
 	}
 }
