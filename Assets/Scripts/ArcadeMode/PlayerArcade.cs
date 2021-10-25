@@ -12,10 +12,12 @@ public class PlayerArcade : MonoBehaviour
 	public float movementSpeed = 500f;
 	public float durationCurrentLevelPainel = 2.2f;
 	public Joystick joystick;
+	public AudioSource invertGravitySound;
 
 	private bool shouldChangeGravity = false;
 	private bool isDead = false;
 	private Color playerColor;
+	private bool isFirstTimePlayedInvertGravitySound = true;
 
 	private void Update()
 	{
@@ -73,6 +75,20 @@ public class PlayerArcade : MonoBehaviour
 	void invertGravity()
 	{
 		rigidBodyPlayer.gravityScale *= -1;
+		playerInvertGravitySound();
+	}
+
+	void playerInvertGravitySound()
+	{
+		if (isFirstTimePlayedInvertGravitySound)
+		{
+			invertGravitySound.gameObject.SetActive(true);
+			isFirstTimePlayedInvertGravitySound = false;
+		}
+		else
+		{
+			invertGravitySound.Play();
+		}
 	}
 
 	void zeroGravity()
