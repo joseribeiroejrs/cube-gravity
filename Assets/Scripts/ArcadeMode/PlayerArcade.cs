@@ -13,6 +13,7 @@ public class PlayerArcade : MonoBehaviour
 	public float durationCurrentLevelPainel = 2.2f;
 	public Joystick joystick;
 	public AudioSource invertGravitySound;
+	public TrailRenderer playerTrail;
 
 	private bool shouldChangeGravity = false;
 	private bool isDead = false;
@@ -37,7 +38,7 @@ public class PlayerArcade : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Obstacle"))
+		if (collision.CompareTag("Obstacle") && !isDead)
 		{
 			isDead = true;
 			showExplosionPlayer();
@@ -51,7 +52,7 @@ public class PlayerArcade : MonoBehaviour
 			changeGravity();
 		}
 		movementHorizontal();
-		changeSpriteColor();
+		changePlayerColors();
 	}
 
 	public bool currentLevelPainelIsHide()
@@ -136,6 +137,21 @@ public class PlayerArcade : MonoBehaviour
 		splashImage.enabled = false;
 		GameObject objectInstatiated = Instantiate(explosionPlayer, transform);
 		objectInstatiated.GetComponent<Renderer>().material.color = playerColor;
+	}
+
+
+	void changePlayerColors()
+	{
+		changeSpriteColor();
+		changeTrailColor();
+	}
+
+	void changeTrailColor()
+	{
+		if (playerColor != null)
+		{
+			playerTrail.material.color = playerColor;
+		}
 	}
 
 	void changeSpriteColor()

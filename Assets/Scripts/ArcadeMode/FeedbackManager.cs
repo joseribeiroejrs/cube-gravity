@@ -12,6 +12,8 @@ public class FeedbackManager : MonoBehaviour
     public Text currentLevelText;
     public Text completedLevelText;
 
+    public float DISPLAY_TIME_PANELS = 3f;
+
     private void Start()
 	{
         changeCurrentLevelText();
@@ -38,13 +40,13 @@ public class FeedbackManager : MonoBehaviour
 
     IEnumerator hideCurrentLevelPainel()
 	{
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(DISPLAY_TIME_PANELS);
         CurrentLevelPainel.SetActive(false);
     }
 
     IEnumerator LoadNextLevel()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(DISPLAY_TIME_PANELS);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -52,7 +54,7 @@ public class FeedbackManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         LevelFailedPainel.SetActive(true);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(DISPLAY_TIME_PANELS);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
