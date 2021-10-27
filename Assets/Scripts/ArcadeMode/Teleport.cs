@@ -13,6 +13,16 @@ public class Teleport : MonoBehaviour
 		{
 			collision.transform.position = TeleportTo.transform.position;
 			teleportManager.saveTimePlayerTeleported();
+			StartCoroutine("hideTrailPlayer");
 		}
+	}
+
+	private IEnumerator hideTrailPlayer()
+	{
+		PlayerArcade playerObject = FindObjectOfType<PlayerArcade>();
+		float oldTime = playerObject.playerTrail.time;
+		playerObject.playerTrail.time = 0;
+		yield return new WaitForSeconds(.1f);
+		playerObject.playerTrail.time = oldTime;
 	}
 }
