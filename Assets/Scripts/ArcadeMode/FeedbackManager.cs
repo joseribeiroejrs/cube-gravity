@@ -46,8 +46,10 @@ public class FeedbackManager : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
+        int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
         yield return new WaitForSeconds(DISPLAY_TIME_PANELS);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        setLevelReached(nextLevel);
+        SceneManager.LoadScene(nextLevel);
     }
 
     IEnumerator LoadActiveLevel()
@@ -56,5 +58,10 @@ public class FeedbackManager : MonoBehaviour
         LevelFailedPainel.SetActive(true);
         yield return new WaitForSeconds(DISPLAY_TIME_PANELS);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void setLevelReached(int level)
+	{
+        PlayerPrefs.SetInt("level", level);
     }
 }
