@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
 		if (isEscapePressed())
 		{
 			changeGameIsPaused();
+			ResumeOrPauseGame();
 		}
 	}
 	public void QuitEvent()
@@ -25,16 +26,21 @@ public class PauseMenu : MonoBehaviour
 		Resume();
 	}
 
-	public void changeGameIsPaused()
+	public void ResumeOrPauseGame()
 	{
-		GameIsPaused = !GameIsPaused;
 		if (GameIsPaused)
 		{
 			Resume();
-		} else
+		}
+		else
 		{
 			Pause();
 		}
+	}
+
+	public void changeGameIsPaused()
+	{
+		GameIsPaused = !GameIsPaused;
 	}
 
 	public void Resume()
