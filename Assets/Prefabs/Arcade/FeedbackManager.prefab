@@ -292,6 +292,7 @@ MonoBehaviour:
   LevelFailedPainel: {fileID: 5997752358170044167}
   currentLevelText: {fileID: 1586512281495986758}
   completedLevelText: {fileID: 8799878827152688755}
+  DISPLAY_TIME_PANELS: 3
 --- !u!1 &3223722407829950145
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +602,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
