@@ -26,6 +26,9 @@ Modo de jogo em que você precisa passar por diversos níveis repletos de obstá
 ### Race Mode
 Modo de jogo parecido com o Flappy Bird, mas com os mais variados obstáculos ao invés das barras com espaço fixo.
 
+## Stack
+O jogo utiliza da **Unity 2020.3.17**, basta clonar e repositório nessa versão ou **2020.3.X** (nesse caso irá ter um aviso de que será necessário um reimport, basta fazê-lo) e já sair programando.
+
 # SrBrigão
 Esse projeto é gratuito, então você é livre para jogar e fazer o que bem entender com ele. Caso queira me ajudar, considere me seguir nas redes sociais. Isso irá me ajudar muito.
 
