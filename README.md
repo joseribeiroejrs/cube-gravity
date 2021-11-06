@@ -5,6 +5,12 @@ Iniciei esse projeto com o objetivo de praticar os conhecimentos que adquiri ao 
 
 Embora esse projeto seja simples eu escolhi deixá-lo open source, pois imaginei que ele possa ser útil para algum estudante ou algum fã do jogo que queira criar novas fases/mods para o jogo. Sinta-se livre para baixar todo o código fonte e criar as modificações desejadas.
 
+
+
+https://user-images.githubusercontent.com/25959234/140611054-88884698-fac5-49d1-b2ba-ec74a264fd64.mp4
+
+
+
 ## Modos de Jogo
 Atualmente apenas o Infinity mode está com o desenvolvimento completo, mas ainda será necessária uma refatoração futura. Atualmente meu foco está no Arcade Mode.
 - [x] Infinity;
@@ -24,3 +30,6 @@ Modo de jogo parecido com o Flappy Bird, mas com os mais variados obstáculos ao
 Esse projeto é gratuito, então você é livre para jogar e fazer o que bem entender com ele. Caso queira me ajudar, considere me seguir nas redes sociais. Isso irá me ajudar muito.
 
 [Youtube](https://www.youtube.com/channel/UCoRtOhYMUFmEXuNHLqFvxuA) - [Twitch](https://www.twitch.tv/srbrigao)
+
+![logo](https://user-images.githubusercontent.com/25959234/140611106-71dbc1b9-ea61-42bb-811a-99abca244965.png)
+
