@@ -20,6 +20,13 @@ public class PlayerArcade : MonoBehaviour
 	private Color playerColor;
 	private bool isFirstTimePlayedInvertGravitySound = true;
 
+	private void Start()
+	{
+		#if UNITY_ANDROID && !UNITY_EDITOR
+			rigidBodyPlayer.gravityScale = 1;
+		#endif
+	}
+
 	private void Update()
 	{
 		if (getJumpMovement() && !shouldChangeGravity)
