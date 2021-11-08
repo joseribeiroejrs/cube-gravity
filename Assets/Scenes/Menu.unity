@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f9b514fe8f346478c0a6d8cf88df34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalLevels: 16
+  totalLevels: 25
   levelButton: {fileID: 4672860290980281665, guid: 0376cb385445cea4d9b59a6ab123e34c, type: 3}
   ParentPanel: {fileID: 937920523}
 --- !u!4 &449494783
