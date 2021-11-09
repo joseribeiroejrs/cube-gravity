@@ -45,7 +45,10 @@ public class PlayerArcade : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.CompareTag("Obstacle") && !isDead)
+		bool isCollisionWithEnemy = collision.CompareTag("Enemy");
+		bool isCollisionWithObstacle = collision.CompareTag("Obstacle");
+
+		if ((isCollisionWithEnemy || isCollisionWithObstacle) && !isDead)
 		{
 			isDead = true;
 			showExplosionPlayer();

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Objective
   - Wall
   - Background
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2947832803
+    locked: 0
+  - name: Enemy
+    uniqueID: 3238217167
     locked: 0
   - name: Objective
     uniqueID: 3345029861
