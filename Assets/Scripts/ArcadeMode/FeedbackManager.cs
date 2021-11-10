@@ -62,6 +62,10 @@ public class FeedbackManager : MonoBehaviour
 
     void setLevelReached(int level)
 	{
-        PlayerPrefs.SetInt("level", level);
+        int levelReached = PlayerPrefs.GetInt("level");
+        if (level > levelReached)
+		{
+            PlayerPrefs.SetInt("level", level);
+		}
     }
 }
