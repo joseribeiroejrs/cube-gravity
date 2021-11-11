@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-	public Canvas arcadeLevels;
-	public Canvas menuPrincipal;
+	public GameObject arcadeLevels;
+	public GameObject menuPrincipal;
 	public void PlayEvent()
 	{
-		arcadeLevels.gameObject.SetActive(true);
-		menuPrincipal.gameObject.SetActive(false);
+		arcadeLevels.SetActive(true);
+		menuPrincipal.SetActive(false);
 	}
 
 	public void BackToMenu()
 	{
-		arcadeLevels.gameObject.SetActive(false);
-		menuPrincipal.gameObject.SetActive(true);
+		arcadeLevels.SetActive(false);
+		menuPrincipal.SetActive(true);
 	}
 
 	public void QuitEvent() 
