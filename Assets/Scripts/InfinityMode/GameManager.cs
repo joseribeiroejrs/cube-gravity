@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
 	public Canvas gameOverCanvas;
 	public float slowness = 10f;
+	public HighScoreController highScoreController;
 	private float originalFixedDeltaTime;
 
 	private void Start()
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
 	IEnumerator gameOverCoroutine()
 	{
+		highScoreController.showNewRecordOrCurrentHighScore();
 		showMatrixCamera();
 		yield return new WaitForSeconds(1.5f / slowness);
 		showGameOverCanvas();

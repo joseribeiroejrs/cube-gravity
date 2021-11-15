@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 	public Rigidbody2D rigidBodyPlayer;
 	public GameManager gameManager;
 	private bool shouldChangeGravity = false;
+	private Color playerColor;
 
 	private void Update()
 	{
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
 		{
 			shouldChangeGravity = true;
 		}
+
+		changeSpriteColor();
 	}
 
 	private void FixedUpdate()
@@ -30,7 +33,16 @@ public class Player : MonoBehaviour
 		gameManager.gameOver();
 	}
 
-	void changeGravity()
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.CompareTag("Obstacle"))
+		{
+
+			gameManager.gameOver();
+		}
+	}
+
+	public void changeGravity()
 	{
 		resetVelocity();
 		invertGravity();
@@ -61,6 +73,15 @@ public class Player : MonoBehaviour
 
 	bool getJumpMovement()
 	{
-		return Input.GetKeyDown(KeyCode.Space);
+		return Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
+	}
+
+	void changeSpriteColor()
+	{
+		Color DEFAULT_BLUE = new Color(0, 9, 191);
+		Color DEFAULT_ORANGE = new Color(191, 9, 0);
+		playerColor = rigidBodyPlayer.gravityScale > 0 ? DEFAULT_ORANGE : DEFAULT_BLUE;
+
+		gameObject.GetComponent<Renderer>().material.color = playerColor;
 	}
 }

@@ -118,5 +118,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBodyPlayer: {fileID: 6438364963391688162}
-  playerExplosionParticle: {fileID: 0}
   gameManager: {fileID: 0}
