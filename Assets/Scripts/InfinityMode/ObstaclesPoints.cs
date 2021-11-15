@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class ObstaclesPoints : MonoBehaviour
 {
-    private PointsController pointsController;
+	public AudioSource SuccessSound;
+
+	private bool isFirstTimePlayedSuccessSound = true;
+	private PointsController pointsController;
 	private int PLAYER_LAYER = 6;
 
 	private void Awake()
@@ -18,8 +21,20 @@ public class ObstaclesPoints : MonoBehaviour
 
 		if (layer == PLAYER_LAYER)
 		{
-			Debug.Log("Colidi e vou adicionar pontos");
 			pointsController.addPoints();
+			playSuccessSound();
+		}
+	}
+	public void playSuccessSound()
+	{
+		if (isFirstTimePlayedSuccessSound)
+		{
+			SuccessSound.gameObject.SetActive(true);
+			isFirstTimePlayedSuccessSound = false;
+		}
+		else
+		{
+			SuccessSound.Play();
 		}
 	}
 }
