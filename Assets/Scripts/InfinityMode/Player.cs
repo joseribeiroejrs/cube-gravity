@@ -6,8 +6,14 @@ public class Player : MonoBehaviour
 {
 	public Rigidbody2D rigidBodyPlayer;
 	public GameManager gameManager;
+	public AudioSource invertGravitySound;
+	public AudioSource explosionSound;
+	public SpriteRenderer splashImage;
+
 	private bool shouldChangeGravity = false;
 	private Color playerColor;
+	private bool isFirstTimePlayedInvertGravitySound = true;
+	private bool isFirstTimePlayedExplosionSound = true;
 
 	private void Update()
 	{
@@ -30,7 +36,7 @@ public class Player : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		gameManager.gameOver();
+		GameOver();
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -38,8 +44,13 @@ public class Player : MonoBehaviour
 		if (collision.CompareTag("Obstacle"))
 		{
 
-			gameManager.gameOver();
+			GameOver();
 		}
+	}
+
+	public void GameOver() {
+		startExplosionSound();
+		gameManager.gameOver();
 	}
 
 	public void changeGravity()
@@ -47,6 +58,7 @@ public class Player : MonoBehaviour
 		resetVelocity();
 		invertGravity();
 		shouldChangeGravity = false;
+		playerInvertGravitySound();
 	}
 
 	void updateGravityScale()
@@ -83,5 +95,30 @@ public class Player : MonoBehaviour
 		playerColor = rigidBodyPlayer.gravityScale > 0 ? DEFAULT_ORANGE : DEFAULT_BLUE;
 
 		gameObject.GetComponent<Renderer>().material.color = playerColor;
+	}
+
+	void playerInvertGravitySound()
+	{
+		if (isFirstTimePlayedInvertGravitySound)
+		{
+			invertGravitySound.gameObject.SetActive(true);
+			isFirstTimePlayedInvertGravitySound = false;
+		}
+		else
+		{
+			invertGravitySound.Play();
+		}
+	}
+
+	void startExplosionSound()
+	{
+		if (isFirstTimePlayedExplosionSound)
+		{
+			explosionSound.gameObject.SetActive(true);
+			isFirstTimePlayedExplosionSound = false;
+		} else
+		{
+			explosionSound.Play();
+		}
 	}
 }
