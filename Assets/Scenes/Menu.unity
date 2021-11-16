@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arcadeLevels: {fileID: 1104278002}
   menuPrincipal: {fileID: 175170100}
-  selectMode: {fileID: 0}
+  selectMode: {fileID: 1089123532}
 --- !u!114 &595001517
 MonoBehaviour:
   m_ObjectHideFlags: 0

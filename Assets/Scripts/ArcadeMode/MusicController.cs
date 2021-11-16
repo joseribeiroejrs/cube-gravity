@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
-    void Awake()
+	public static MusicController Instance { get; private set; }
+	void Awake()
 	{
+		if (Instance != null && Instance != this)
+		{
+			gameObject.SetActive(false);
+			return;
+		}
+
+		Instance = this;
 		DontDestroyOnLoad(gameObject);
 	}
 }

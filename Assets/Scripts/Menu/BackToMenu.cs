@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BackToMenu : MonoBehaviour
 {
-    public void BackToMenuAction()
+	public GameManager gameManager;
+    public void BackToMenuByInfinityMode()
 	{
+		gameManager.hideMatrixCamera();
 		SceneManager.LoadScene(0);
 	}
 }

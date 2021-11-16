@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour
@@ -47,6 +48,8 @@ public class LevelSelect : MonoBehaviour
 	void LevelSelected(int index)
 	{
 		PlayerPrefs.SetInt("levelSelected", index);
+		string levelClicked = "play_arcade_level_" + index.ToString();
+		Analytics.CustomEvent(levelClicked);
 		LoadGamePLayer(index);
 	}
 
