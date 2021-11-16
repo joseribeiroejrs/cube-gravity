@@ -526,7 +526,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 363f1cc00ec2b8442824069eaedce32c, type: 3}
+    m_Font: {fileID: 12800000, guid: 6f4513afc15115b43bad3610485c021a, type: 3}
     m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
@@ -973,8 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalLevels: 20
-  levelButton: {fileID: 4672860290980281665, guid: 0376cb385445cea4d9b59a6ab123e34c,
-    type: 3}
+  levelButton: {fileID: 4672860290980281665, guid: 0376cb385445cea4d9b59a6ab123e34c, type: 3}
   ParentPanel: {fileID: 937920523}
 --- !u!4 &449494783
 Transform:
@@ -1311,8 +1310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875,
-    type: 3}
+  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1898,7 +1896,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 363f1cc00ec2b8442824069eaedce32c, type: 3}
+    m_Font: {fileID: 12800000, guid: 6f4513afc15115b43bad3610485c021a, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -2432,8 +2430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875,
-    type: 3}
+  m_Sprite: {fileID: 8177471321811730583, guid: 87aaca0a643d54397ba969dab4fc8875, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
