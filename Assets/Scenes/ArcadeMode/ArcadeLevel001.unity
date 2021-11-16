@@ -207,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerArcade
       objectReference: {fileID: 0}
+    - target: {fileID: 6438364963391688173, guid: 2fc207f53fa5e2447871615bf80fea42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc207f53fa5e2447871615bf80fea42, type: 3}
 --- !u!4 &243036356 stripped
@@ -1410,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManagerArcade
       objectReference: {fileID: 0}
+    - target: {fileID: 6853868539963242798, guid: fc9814d306f6fac44948ffff24a686bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc9814d306f6fac44948ffff24a686bb, type: 3}
 --- !u!1001 &3223722408197735382
@@ -1419,6 +1427,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2465424758918621860, guid: 38517d74496e9cb46a3f5201d65bdff3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2465424758918621860, guid: 38517d74496e9cb46a3f5201d65bdff3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3223722407746582054, guid: 38517d74496e9cb46a3f5201d65bdff3, type: 3}
       propertyPath: m_RootOrder
       value: 5
