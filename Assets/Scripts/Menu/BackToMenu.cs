@@ -9,6 +9,11 @@ public class BackToMenu : MonoBehaviour
     public void BackToMenuByInfinityMode()
 	{
 		gameManager.hideMatrixCamera();
+		BackToMenuGeneric();
+	}
+
+	public void BackToMenuGeneric()
+	{
 		SceneManager.LoadScene(0);
 	}
 }

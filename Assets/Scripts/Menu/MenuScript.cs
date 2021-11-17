@@ -29,7 +29,7 @@ public class MenuScript : MonoBehaviour
 
 	public void PlayInfinityMode()
 	{
-		int INFINITY_LEVEL = 21;
+		int INFINITY_LEVEL = 22;
 		Analytics.CustomEvent("play_infinity_mode");
 		SceneManager.LoadScene(INFINITY_LEVEL);
 	}
@@ -50,6 +50,12 @@ public class MenuScript : MonoBehaviour
 		menuPrincipal.SetActive(false);
 		optionsPanel.SetActive(true);
 		Analytics.CustomEvent("options_menu");
+	}
+
+	public void CreditsEvent()
+	{
+		int CREDITS_SCENE_INDEX = 21;
+		SceneManager.LoadScene(CREDITS_SCENE_INDEX);
 	}
 
 	public void BackToMenuByInfinityMode()

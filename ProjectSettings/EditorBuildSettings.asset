@@ -69,6 +69,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ArcadeMode/ArcadeLevel020.unity
     guid: b365f54cebd97f84e88ed5eee732b0c9
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 3f18270f8c43fdd44b17a5c2ebcb2f46
+  - enabled: 1
     path: Assets/Scenes/InfinityLevel/InfinityLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
