@@ -9,11 +9,13 @@ public class MenuScript : MonoBehaviour
 	public GameObject arcadeLevels;
 	public GameObject menuPrincipal;
 	public GameObject selectMode;
+	public GameObject optionsPanel;
 	public void PlayEvent()
 	{
 		arcadeLevels.SetActive(false);
 		selectMode.SetActive(true);
 		menuPrincipal.SetActive(false);
+		optionsPanel.SetActive(false);
 		Analytics.CustomEvent("play_clicked");
 	}
 
@@ -21,6 +23,7 @@ public class MenuScript : MonoBehaviour
 	{
 		arcadeLevels.SetActive(false);
 		menuPrincipal.SetActive(true);
+		optionsPanel.SetActive(false);
 		selectMode.SetActive(false);
 	}
 
@@ -36,7 +39,17 @@ public class MenuScript : MonoBehaviour
 		arcadeLevels.SetActive(true);
 		selectMode.SetActive(false);
 		menuPrincipal.SetActive(false);
+		optionsPanel.SetActive(false);
 		Analytics.CustomEvent("play_arcade_mode");
+	}
+
+	public void OptionsEvent()
+	{
+		arcadeLevels.SetActive(false);
+		selectMode.SetActive(false);
+		menuPrincipal.SetActive(false);
+		optionsPanel.SetActive(true);
+		Analytics.CustomEvent("options_menu");
 	}
 
 	public void BackToMenuByInfinityMode()

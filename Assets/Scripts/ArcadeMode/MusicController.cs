@@ -16,13 +16,5 @@ public class MusicController : MonoBehaviour
 
 		Instance = this;
 		DontDestroyOnLoad(gameObject);
-		StartCoroutine("PlaySounds");
-	}
-
-	IEnumerator PlaySounds()
-	{
-		sound.Pause();
-		yield return new WaitForSeconds(5.5f);
-		sound.Play();
 	}
 }
